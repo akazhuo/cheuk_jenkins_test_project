@@ -86,8 +86,9 @@
     </target>
 
     <target name="phpunit" description="Run unit tests with PHPUnit">
-        <exec executable="phpunit" />
+        <exec executable="./vendor/bin/${phpunit}" />
     </target>
+
     <target name="test" description="Run PHPUnit tests">
         <phpunit haltonerror="true" haltonfailure="true" printsummary="true">
             <batchtest>
