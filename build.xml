@@ -10,6 +10,7 @@
     <property name="distfile"    value="dist/${tarfile}" />
     <property name="tests.dir" value="test" />
     <property name="phpunit" value="phpunit"/>
+
     <!-- 打包 -->
     <fileset id="api.tar.gz" dir=".">
         <include name="test/**"/>
@@ -89,7 +90,6 @@
     <target name="phpunit" description="Run unit tests with PHPUnit">
         <exec executable="./vendor/bin/${phpunit}" />
     </target>
-
     <target name="test" description="Run PHPUnit tests">
         <phpunit haltonerror="true" haltonfailure="true" printsummary="true">
             <batchtest>
